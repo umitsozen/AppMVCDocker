@@ -1,0 +1,21 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "ShowImageList";
+}
+
+<h1>ShowImageList</h1>
+
+@foreach (var item in Model)
+{
+    <div>
+        <img src="/images/@item" style="width:100px;height:100px float:left; border:1px solid blue;" />
+        <h3>@item</h3>
+    </div>
+}
+
+<form method="post" asp-action="ShowImageList">
+    <input type="text" name ="name" />
+    <input type="submit"/> 
+
+</form>
+
